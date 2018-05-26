@@ -87,7 +87,7 @@ echo "1) Bahasa Indonesia Ke Sunda\n";
 echo "2) Bahasa Indonesia Ke Sunda Kasar\n";
 echo "3) Bahasa Indonesia Ke Sunda Halus\n";
 echo "4) Sunda Ke Bahasa Indonesia\n";
-echo "5) Laporkan BUG atau Kirim Pesan Kepada Kami\n";
+echo "5) Laporkan BUG / ASK to Us\n";
 echo "6) Cek Update\n";
 echo "7) About Us :)\n";
 echo "8) Keluar :(\n";
