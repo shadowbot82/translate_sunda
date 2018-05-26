@@ -246,7 +246,7 @@ if ($id == "5") {
     lapor_bug($nama, $email, $pesan);
 }
 if ($id == "6") {
-    $v = "1null";
+    $v = "1.0";
     echo "Sedang mengecek update...\n";
     update($v);
 }
