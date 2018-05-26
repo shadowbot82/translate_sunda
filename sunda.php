@@ -51,14 +51,15 @@ function lapor_bug($nama, $email, $pesan){
         $up = trim(fgets(STDIN, 1024));
         if ($up == "y") {
             echo "Sedang mengunduh...\n";
-            system('wget -O '.$nf.' https://raw.githubusercontent.com/ardzz/translator_sunda/master/sunda.php 2>&1');
-            echo "Success! Please Restart This Tool For Applying New Feature!\nUsage : php $inf\n";
+            shell_exec('wget -O '.$nf.' https://raw.githubusercontent.com/ardzz/translator_sunda/master/sunda.php 2>&1');
+            echo "Success! Please Restart This Tool For Applying New Feature!\n";
             sleep(2);
             }
             else {
-                echo "Membatalkan Update....\n";
+                echo "Membatalkan Update....";
                 sleep(5);
                 exit();
+                exec('clear');
             }
     }
         elseif ($update['version'] == "null") {
@@ -101,9 +102,9 @@ $data = "text=".$indo."&md=is";
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             'Cookie: _gat=1; PHPSESSID=f314jsomv69b3p9i6lg6rfo202; _ga=GA1.2.359346977.1525957494; _gid=GA1.2.1300337294.1526214681',
             'Content-Type: application/x-www-form-urlencoded',
@@ -245,7 +246,7 @@ if ($id == "5") {
     lapor_bug($nama, $email, $pesan);
 }
 if ($id == "6") {
-    $v = "1.0";
+    $v = "1null";
     echo "Sedang mengecek update...\n";
     update($v);
 }
