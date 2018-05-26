@@ -51,7 +51,7 @@ function lapor_bug($nama, $email, $pesan){
         $up = trim(fgets(STDIN, 1024));
         if ($up == "y") {
             echo "Sedang mengunduh...\n";
-            system('wget -O '.$nf.' https://raw.githubusercontent.com/ardzz/yt-convert/master/yt.php 2>&1');
+            system('wget -O '.$nf.' https://raw.githubusercontent.com/ardzz/translator_sunda/master/sunda.php 2>&1');
             echo "Success! Please Restart This Tool For Applying New Feature!\nUsage : php $inf\n";
             sleep(2);
             }
